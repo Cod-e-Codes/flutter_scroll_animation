@@ -1,0 +1,38 @@
+name: flutter_scroll_animation
+description: >
+  A Flutter package that provides scroll-driven animations. Widgets become visible 
+  and animate into view when they enter the viewport, enabling smooth and dynamic UI transitions.
+version: 0.0.1
+homepage: https://github.com/cod-e-codes/flutter_scroll_animation
+repository: https://github.com/cod-e-codes/flutter_scroll_animation
+issue_tracker: https://github.com/cod-e-codes/flutter_scroll_animation/issues
+
+environment:
+  sdk: ">=3.5.1 <4.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  visibility_detector: ^0.4.0+2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  # The following line ensures that the Material Icons font is included
+  # with your package so that you can use the icons in the material Icons class.
+  uses-material-design: true
+
+  # Add your assets here if needed in the future.
+  # assets:
+  #   - assets/screenshots/screenshot_1.png
+  #   - assets/screenshots/screenshot_2.png
+
+  # If custom fonts are needed, add them like this:
+  # fonts:
+  #   - family: CustomFont
+  #     fonts:
+  #       - asset: fonts/CustomFont-Regular.ttf
