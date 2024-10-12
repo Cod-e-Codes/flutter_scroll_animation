@@ -30,14 +30,20 @@ class ExampleScreen extends StatelessWidget {
           const SectionTitle(title: "Card Animations"),
           buildAnimatedCards(),
 
-          const SectionTitle(title: "Image Animations"),
-          buildAnimatedImages(),
+          const SectionTitle(title: "Icon Animations"),
+          buildAnimatedIcons(),
 
           const SectionTitle(title: "Text Animations"),
           buildAnimatedText(),
 
           const SectionTitle(title: "Button Animations"),
           buildAnimatedButtons(),
+
+          const SectionTitle(title: "Switch & Checkbox Animations"),
+          buildAnimatedSwitchesAndCheckboxes(),
+
+          const SectionTitle(title: "Container Animations"),
+          buildAnimatedContainers(),
         ],
       ),
     );
@@ -66,38 +72,26 @@ class ExampleScreen extends StatelessWidget {
     );
   }
 
-  Widget buildAnimatedImages() {
+  Widget buildAnimatedIcons() {
     return Column(
       children: [
         ScrollAnimationWidget(
-          index: 'image_1',
-          alignment: Alignment.center,
-          duration: const Duration(milliseconds: 700),
+          index: 'icon_1',
+          alignment: Alignment.centerLeft,
+          duration: const Duration(milliseconds: 600),
           child: Padding(
             padding: const EdgeInsets.all(16.0),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(8.0),
-              child: Image.network(
-                'https://via.placeholder.com/400x200.png?text=Animated+Image+1',
-                height: 200,
-              ),
-            ),
+            child: Icon(Icons.star, size: 50, color: Colors.amber),
           ),
         ),
         ScrollAnimationWidget(
-          index: 'image_2',
+          index: 'icon_2',
           alignment: Alignment.centerRight,
-          duration: const Duration(milliseconds: 700),
-          curve: Curves.bounceIn,
+          duration: const Duration(milliseconds: 600),
+          curve: Curves.easeInOutBack,
           child: Padding(
             padding: const EdgeInsets.all(16.0),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(8.0),
-              child: Image.network(
-                'https://via.placeholder.com/400x200.png?text=Animated+Image+2',
-                height: 200,
-              ),
-            ),
+            child: Icon(Icons.favorite, size: 50, color: Colors.red),
           ),
         ),
       ],
@@ -161,6 +155,89 @@ class ExampleScreen extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {},
               child: const Text('Animated Button 2'),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget buildAnimatedSwitchesAndCheckboxes() {
+    return Column(
+      children: [
+        ScrollAnimationWidget(
+          index: 'switch_1',
+          alignment: Alignment.centerLeft,
+          duration: const Duration(milliseconds: 500),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text('Switch 1'),
+                Switch(value: true, onChanged: (value) {}),
+              ],
+            ),
+          ),
+        ),
+        ScrollAnimationWidget(
+          index: 'checkbox_1',
+          alignment: Alignment.centerRight,
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.elasticOut,
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text('Checkbox 1'),
+                Checkbox(value: true, onChanged: (value) {}),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget buildAnimatedContainers() {
+    return Column(
+      children: [
+        ScrollAnimationWidget(
+          index: 'container_1',
+          alignment: Alignment.centerLeft,
+          duration: const Duration(milliseconds: 600),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.blue,
+              child: const Center(
+                child: Text(
+                  'Box 1',
+                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+          ),
+        ),
+        ScrollAnimationWidget(
+          index: 'container_2',
+          alignment: Alignment.centerRight,
+          duration: const Duration(milliseconds: 600),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.green,
+              child: const Center(
+                child: Text(
+                  'Box 2',
+                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+              ),
             ),
           ),
         ),
