@@ -9,7 +9,7 @@ issue_tracker: https://github.com/cod-e-codes/flutter_scroll_animation/issues
 
 environment:
   sdk: ">=3.5.1 <4.0.0"
-  flutter: ">=1.17.0"
+  flutter: ">=3.0.0"
 
 dependencies:
   flutter:

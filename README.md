@@ -95,6 +95,6 @@ ScrollAnimationWidget(
 
 For more examples, see the `example` folder in the repository. If you encounter any issues, have feature requests, or want to contribute, feel free to open an issue or submit a pull request on GitHub.
 
-- Visit the [GitHub repository](https://github.com/your_github/flutter_scroll_animation) for more details, support, and contributions.
+- Visit the [GitHub repository](https://github.com/cod-e-codes/flutter_scroll_animation) for more details, support, and contributions.
 - File an issue if you encounter bugs or have suggestions.
 - Contributions are welcome! Please read the contribution guidelines before submitting pull requests.
